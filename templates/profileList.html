@@ -18,7 +18,7 @@ Netflix - Profile
         <div class="flex flex-wrap justify-center items-center w-10/12  md:w-6/12">
 
         {% for profile in profiles %}
-            <a href="#">
+            <a href="{% url 'core:watch' profile_id=profile.uuid %}">
             
                 <div class="w-32 h-32 m-4  bg-blue-500 flex justify-center items-center flex-col rounded-md cursor-pointer">
                     <p class='text-6xl'>

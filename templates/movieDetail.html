@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix - Detail Page</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-</head>
-<body class='font-primary'>
-    <nav class="flex justify-between items-center py-3 px-4 fixed w-full z-50">
-        <div class="w-6/12">
-            <img src="assets/netflix.png" alt="logo" class="w-5/12 md:w-2/12">
-        </div>
-
-        <div>
-            <button class='bg-primary_red py-1 px-3 text-white md:text-lg rounded-md'>
-                Log out
-            </button>
-        </div>
-        
-    </nav>
+{% extends 'base.html' %}
+{% load static %}
+    {% block title %}Netflix - Detail Page{% endblock title %}
+    {% block others %}<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>{% endblock others %}
+    
+{% block content %}
+    {% include 'partials/navbar.html' %}
     <main class='bg-primary_black min-h-screen w-full'>
         <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex justify-end items-end bg-cover" style="background-image: url('assets/movie.webp');">
             <div>
@@ -61,20 +45,4 @@
         </section>
         
     </main>
-    <script>
-        const nav = document.querySelector('nav')
-
-        document.addEventListener("scroll",e=>{
-            
-            if(scrollY>200){
-                nav.classList.add('bg-gray-900')
-          
-            }else{
-                nav.classList.remove('bg-gray-900')
-                
-            }
-        })
-
-    </script>
-</body>
-</html>
+{% endblock content %}

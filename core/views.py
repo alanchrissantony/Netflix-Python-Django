@@ -1,9 +1,8 @@
-from .models import Profile
 from django.views import View
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-
+from .models import Movie, Profile
 from .forms import ProfileForm
 
 # Create your views here.
@@ -21,7 +20,7 @@ class ProfileList(View):
         profiles = request.user.profiles.all()
         return render(request, 'profileList.html', {'profiles' : profiles})
 
-
+@method_decorator(login_required,name='dispatch')
 class ProfileCreate(View):
     def get(self, request, *args, **kwargs):
         form = ProfileForm()
@@ -37,3 +36,18 @@ class ProfileCreate(View):
                 return redirect('core:profile_list')
 
         return render(request, 'profileCreate.html', {'form':form})
+
+@method_decorator(login_required,name='dispatch')
+class Watch(View):
+    def get(self, request, profile_id, *args, **kwargs):
+        try:
+            profile=Profile.objects.get(uuid=profile_id)
+            movies=Movie.objects.filter(age_limit=profile.age_limit)
+
+            if profile not in request.user.profiles.all():
+                return redirect(to='core: profile_list')
+            
+            return render(request, 'movieList.html', {'movies' : movies})
+        
+        except Profile.DoesNotExist:
+            return redirect(to='core: profile_list')
