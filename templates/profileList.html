@@ -35,7 +35,7 @@ Netflix - Profile
         {% comment %} {% if request.user.profiles.all|length < 5 %} {% endcomment %}
       
             <div class="flex justify-center items-center">
-                <a href="#">
+                <a href="{% url 'core:profile_create' %}">
                     
                     <button class="px-4 py-2 rounded-md outline-none bg-gray-400 text-gray-100">
                         Add A New Profile
