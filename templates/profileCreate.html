@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix - Profile</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav class="flex justify-between items-center py-3 px-4 fixed w-full z-50">
-        <div class="w-6/12">
-            <img src="assets/netflix.png" alt="logo" class="w-5/12 md:w-2/12">
-        </div>
+{% extends 'base.html' %}
+{% load static %}
+    {% block title %}Netflix - Profile Create{% endblock title %}
 
-        
-    </nav>
-    <section class='bg-primary_black min-h-screen py-20 md:py-32 flex-col flex items-center'>
+
+    {% block content %}
+    {% include 'partials/navbar.html' %}
+    <section class='bg-primary_black min-h-screen py-20 md:py-32 flex-col flex items-center' style="background-image: url('{% static 'background_netflix.jpg' %}');">
         <div class="flex flex-wrap justify-center  w-10/12  md:w-6/12">
             <form class="w-full md:w-8/12 bg-gray-900 p-5 rounded-lg">
                 <h1 class="text-4xl text-center text-gray-100 font-medium">
@@ -44,5 +34,4 @@
         </div>
         
     </section>
-</body>
-</html>
+{% endblock content %}
