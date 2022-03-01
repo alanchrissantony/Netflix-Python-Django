@@ -6,13 +6,13 @@
 {% block content %}
     {% include 'partials/navbar.html' %}
     <main class='bg-primary_black min-h-screen w-full'>
-        <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex justify-end items-end bg-cover" style="background-image: url('{{movie.flyer.url}}');">
+        <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex justify-end items-end bg-cover" style="background-image: url('{{movie.image.url}}');">
             <div>
                 <h2 class="text-6xl font-semibold text-white my-4">
                     {{movie.title}}
                 </h2>
                 <p class=" w-11/12 md:w-5/12 font-medium text-white my-4">
-                    {{movie.descripion}}
+                    {{movie.content}}
                 </p>
                 <div class="flex my-4">
                     <a href="{% url 'core:play' movie_id=movie.uuid %}">
@@ -52,7 +52,7 @@
                 </h2>
                 <div class="flex justify-center  items-center min-w-full  movie_lis">
                     <p class="text-gray-100 text-lg">
-                        {{movie.descripion}}
+                        {{movie.description}}
                     </p>
                 </div>
             </div>
