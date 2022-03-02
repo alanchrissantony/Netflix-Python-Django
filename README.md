@@ -60,6 +60,7 @@ The application is built with:
 
 - Django version 4.0.2
 - Sqlite version 3.31.1
+- Tailwind CSS version 3.0.23  
 - Ionicons version 5.5.2
 
 
