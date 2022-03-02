@@ -34,6 +34,12 @@ NOTE: Please read the RUN section before opening an issue.
 <img src="https://imgur.com/7wsAWZB.png"/>
 <img src="https://imgur.com/Pu8Wet6.png"/>
 <img src="https://imgur.com/CL5W2RP.png"/>
+<img src="https://imgur.com/VeONxcy.png"/>
+<img src="https://imgur.com/04vYrkl.png"/>
+<img src="https://imgur.com/XBRNcC0.png"/>
+<img src="https://imgur.com/GjmvkWs.png"/>
+<img src="https://imgur.com/IXzkDJ1.png"/>
+<img src="https://imgur.com/QoDs97B.png"/>
 </p>
 
 
@@ -67,9 +73,6 @@ Users can do the following:
 - Create profiles
 - Watch movies, animation, TV series and documentaries.
 
-Admins can do the following:
-
-- View all the information stored in the database. They can view/add/edit/delete contents, products and categories.
 
 ## Database
 
