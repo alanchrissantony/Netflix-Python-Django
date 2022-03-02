@@ -14,7 +14,7 @@
 
 ## Introduction
 
-A streaming service built with Python Django that provides a wide range of award-winning TV shows, movies, animation, documentaries, and other content.
+A streaming service built with Python Django that provides a wide range of award-winning TV shows, movies, animations, documentaries, and other content.
 
 
 NOTE: Please read the RUN section before opening an issue.
@@ -37,7 +37,7 @@ NOTE: Please read the RUN section before opening an issue.
 </p>
 
 
-The app provides a wide range of award-winning TV series, movies, animation, and documentaries.
+The app provides a wide range of award-winning TV series, movies, animations, and documentaries.
 
 In order to access the admin panel on "/admin"
 
