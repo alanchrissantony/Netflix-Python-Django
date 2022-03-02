@@ -14,7 +14,7 @@
 
 ## Introduction
 
-A streaming service built with Python Django that provides a wide range of award-winning TV shows, movies, anime, documentaries, and other content.
+A streaming service built with Python Django that provides a wide range of award-winning TV shows, movies, animation, documentaries, and other content.
 
 
 NOTE: Please read the RUN section before opening an issue.
