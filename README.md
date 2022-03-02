@@ -67,7 +67,6 @@ The application is built with:
 
 ## Features
 
-The application displays an online store that contains products.
 
 Users can do the following:
 
