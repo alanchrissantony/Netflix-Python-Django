@@ -17,7 +17,7 @@
                     {{movie.content}}
                 </p>
                 <div class="flex my-4">
-                    <a href="{% url 'core:play' movie_id=movie.uuid %}">
+                    <a href="{% url 'core:play_movie' movie_id=movie.uuid %}">
                         <button class="flex items-center bg-white py-2 px-5 rounded-md" style="color: black;">
                             <ion-icon name="play" class="text-2xl"></ion-icon>
                             <span class="ml-3 font-medium">

@@ -48,6 +48,7 @@ class Watch(View):
             movies=Movie.objects.filter(age_limit=profile.age_limit)
             popular=PopularMovie.objects.filter(age_limit=profile.age_limit)
 
+
             if profile not in request.user.profiles.all():
                 return redirect(to='core: profile_list')
             
@@ -68,10 +69,24 @@ class ShowMovieDetail(View):
 
 
 @method_decorator(login_required,name='dispatch')
+class PlayMovie(View):
+    def get(self, request, movie_id, *args, **kwargs):
+        try:
+            movie = PopularMovie.objects.get(uuid=movie_id)
+            return render(request, 'showMovie.html', { 'movie' : movie })
+            
+        except Movie.DoesNotExist:
+            return redirect('core:profile_list')
+
+
+
+@method_decorator(login_required,name='dispatch')
 class ShowMovie(View):
     def get(self, request, movie_id, *args, **kwargs):
         try:
             movie = Movie.objects.get(uuid=movie_id)
             return render(request, 'showMovie.html', { 'movie' : movie })
+
         except Movie.DoesNotExist:
             return redirect('core:profile_list')
+        
