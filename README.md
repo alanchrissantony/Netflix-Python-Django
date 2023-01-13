@@ -102,4 +102,4 @@ All the models can be found in the models directory created using sqlite DB.
   
   
 
-[Alan Chriss Antony](https://github.com/alanchrissantony)
+[Alan Chris Antony](https://github.com/alanchrissantony)
